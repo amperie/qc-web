@@ -9,8 +9,9 @@ let animationFrame = 0;
 
 function resize() {
   const ratio = Math.min(window.devicePixelRatio || 1, 2);
-  width = canvas.clientWidth;
-  height = canvas.clientHeight;
+  const bounds = canvas.getBoundingClientRect();
+  width = bounds.width || window.innerWidth;
+  height = bounds.height || window.innerHeight;
   canvas.width = Math.max(1, Math.floor(width * ratio));
   canvas.height = Math.max(1, Math.floor(height * ratio));
   context.setTransform(ratio, 0, 0, ratio, 0, 0);
@@ -72,6 +73,13 @@ function draw() {
 if (canvas && context) {
   resize();
   draw();
+
+  const observer = new ResizeObserver(resize);
+  observer.observe(canvas);
+
   window.addEventListener("resize", resize);
-  window.addEventListener("beforeunload", () => cancelAnimationFrame(animationFrame));
+  window.addEventListener("beforeunload", () => {
+    observer.disconnect();
+    cancelAnimationFrame(animationFrame);
+  });
 }
