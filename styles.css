@@ -80,16 +80,18 @@ a {
 .mark {
   display: inline-flex;
   align-items: center;
-  gap: 12px;
+  gap: 14px;
   color: #f6f8f4;
-  font-size: 24px;
-  font-weight: 700;
-  letter-spacing: -0.02em;
+  font-size: clamp(32px, 3.6vw, 46px);
+  font-weight: 800;
+  letter-spacing: 0;
+  line-height: 1;
 }
 
 .mark-symbol {
   color: var(--accent);
-  font-size: 28px;
+  font-size: 1.18em;
+  font-weight: 850;
   letter-spacing: 0;
 }
 
@@ -211,6 +213,11 @@ h1 {
 }
 
 @media (max-width: 560px) {
+  .mark {
+    gap: 10px;
+    font-size: 28px;
+  }
+
   .contact-link {
     padding: 8px 13px;
     font-size: 13px;
