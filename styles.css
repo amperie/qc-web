@@ -78,9 +78,19 @@ a {
 }
 
 .mark {
-  font-size: 13px;
-  font-weight: 500;
-  letter-spacing: 0.22em;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  color: #f6f8f4;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.mark-symbol {
+  color: var(--accent);
+  font-size: 20px;
+  letter-spacing: 0;
 }
 
 .contact-link,
@@ -119,20 +129,6 @@ a {
 
 .copy {
   max-width: 780px;
-}
-
-.eyebrow {
-  display: inline-flex;
-  margin: 0 0 32px;
-  border: 1px solid var(--line);
-  border-radius: 999px;
-  background: rgb(0 0 0 / 10%);
-  padding: 9px 16px;
-  color: var(--dim);
-  font-size: 12px;
-  font-weight: 650;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
 }
 
 h1 {
