@@ -82,14 +82,14 @@ a {
   align-items: center;
   gap: 12px;
   color: #f6f8f4;
-  font-size: 18px;
+  font-size: 24px;
   font-weight: 700;
   letter-spacing: -0.02em;
 }
 
 .mark-symbol {
   color: var(--accent);
-  font-size: 20px;
+  font-size: 28px;
   letter-spacing: 0;
 }
 
@@ -162,15 +162,6 @@ h1 {
   justify-content: center;
   min-height: 48px;
   padding: 13px 24px;
-}
-
-.button.primary {
-  background: var(--accent);
-  color: #050505;
-}
-
-.button.primary:hover {
-  background: #ffc15e;
 }
 
 .button.secondary {
